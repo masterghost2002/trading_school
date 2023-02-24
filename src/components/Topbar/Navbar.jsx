@@ -9,7 +9,6 @@ import {
     Text,
     Link
 } from '@chakra-ui/react';
-// import { NavLink } from "react-router-dom";
 import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 import NavLinks from "./Components/NavLinks";
 import MobileDrawer from './Components/MobileDrawer';

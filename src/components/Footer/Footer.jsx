@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, useColorMode, Divider, SimpleGrid, GridItem, Text, Stack, Link } from '@chakra-ui/react';
 import HeroLogo from '../LandingPage/HeroLogo';
+import { NavLink } from 'react-router-dom';
 import { Slogan } from '../../assests/data';
 import { Email } from '../../assests/data';
 const LeftSide = () => {
@@ -29,7 +30,7 @@ const Center = () => {
             <Stack spacing={5}>
                 <Text fontWeight={600}>Important Links</Text>
                 <Stack fontWeight={500}>
-                    <Link>Privacy Policy</Link>
+                    <Link as={NavLink} to='/privacypolicy'>Privacy Policy</Link>
                     <Link>Refund Policy</Link>
                     <Link>Contact</Link>
                 </Stack>

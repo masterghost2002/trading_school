@@ -1,6 +1,6 @@
 
 import React from 'react'
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Button, Link, useColorMode } from '@chakra-ui/react';
 import { TopBarData } from '../../../assests/data';
 
@@ -23,7 +23,7 @@ export default function NavLinks(props) {
         <>
             {TopBarData.NavBar.Links.map((link, index)=>
                 <Link  
-                    // as ={NavLink}
+                    as ={NavLink}
                     key ={index}
                     to={link.to} 
                     color = {style._non_active_link.color}

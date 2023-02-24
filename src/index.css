@@ -19,3 +19,11 @@ html {
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(20px);
 }
+#backgroundImage{
+  background-repeat: no-repeat;
+  background-position-x: right;
+
+}
+#blur{
+  backdrop-filter: blur(5px);
+}

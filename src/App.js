@@ -1,9 +1,9 @@
 import Banner from "./components/Topbar/Banner";
 import Navbar from "./components/Topbar/Navbar";
-import Home from "./pages/Home";
 import Footer from "./components/Footer/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import NavRouter from "./NavRouter";
 import { useEffect } from "react";
 function App() {
   useEffect(()=>{
@@ -17,7 +17,7 @@ function App() {
     <>
       <Banner />
       <Navbar />
-      <Home />
+      <NavRouter/>
       <Footer/>
     </>
   );

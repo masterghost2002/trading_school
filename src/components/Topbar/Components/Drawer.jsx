@@ -1,18 +1,21 @@
 import React from 'react';
-import { Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent,
+import {
+  useColorMode, Drawer, DrawerBody, DrawerFooter, DrawerHeader, DrawerOverlay, DrawerContent,
   DrawerCloseButton, Flex, Text
 } from "@chakra-ui/react";
 const p = 15;
 export default function DrawerExample({
-  placement = "bottom",
-  width,
-  isOpen,
-  children,
-  onClose,
-  btnRef,
-  title = "Navigate To",
-  footer,
-}) {
+    placement = "right",
+    width,
+    isOpen,
+    children,
+    onClose,
+    btnRef,
+    title = "Navigate To",
+    footer,
+  }) 
+{
+  const {colorMode} = useColorMode()
   return (
     <Flex w={width}>
       <Drawer
@@ -20,9 +23,10 @@ export default function DrawerExample({
         placement={placement}
         onClose={onClose}
         finalFocusRef={btnRef}
+        
       >
         <DrawerOverlay />
-        <DrawerContent alignItems="center" borderRadius = '12px 12px 0px 0px' >
+        <DrawerContent alignItems="center" borderRadius='0px 0px 12px 12px' backgroundColor={colorMode === 'dark' ? '#131516' : 'white'} >
           <DrawerCloseButton alignSelf="end" mx={p} my={p} />
           <DrawerHeader my={p}>
             <Text as="p"> {title} </Text>
