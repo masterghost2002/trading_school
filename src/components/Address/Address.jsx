@@ -32,7 +32,6 @@ export default function Address() {
             <SimpleGrid
                 columns={[2]}
                 columnGap={2}
-                height={['auto', 'auto', 'auto', '100vh']}
                 rowGap={[5]}
             >
                 <StyledItem 

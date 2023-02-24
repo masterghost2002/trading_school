@@ -98,3 +98,15 @@ export const CoursesData = {
         'Long Tern Investement'
     ]
 }
+export const FooterData = {
+    // left part is of logo should be done in footer itself
+    Center:{
+        Header:"Important Links",
+        Links: [{title:"Privacy Policy", to:'/privacypolicy'}, {title:"FAQ", to:'/faq'}, {title:"Contact", to:"/contact"}]
+    },
+    Right:{
+        Header:'GET IN TOUCH',
+        Email:"support@tradingschool.com"
+    },
+    CopyRight:'Copyright © 2023 Trading School. All Rights Reserved'
+}

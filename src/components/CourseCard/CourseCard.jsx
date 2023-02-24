@@ -20,7 +20,6 @@ const DetailComponent = (props)=>{
 }
 
 export default function CourseCard(props) {
-  console.log(props);
   const { colorMode } = useColorMode();
   return (
     <Card backgroundColor={colorMode === 'dark' ? '#3C4048' : 'white'} borderRadius='12px'>

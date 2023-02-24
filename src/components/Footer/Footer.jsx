@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, useColorMode, Divider, SimpleGrid, GridItem, Text, Stack, Link } from '@chakra-ui/react';
 import HeroLogo from '../LandingPage/HeroLogo';
 import { NavLink } from 'react-router-dom';
-import { Slogan } from '../../assests/data';
+import { Slogan, FooterData} from '../../assests/data';
 import { Email } from '../../assests/data';
 const LeftSide = () => {
     return (
@@ -28,11 +28,13 @@ const Center = () => {
             
         >
             <Stack spacing={5}>
-                <Text fontWeight={600}>Important Links</Text>
+                <Text fontWeight={600}>{FooterData.Center.Header}</Text>
                 <Stack fontWeight={500}>
-                    <Link as={NavLink} to='/privacypolicy'>Privacy Policy</Link>
-                    <Link>Refund Policy</Link>
-                    <Link>Contact</Link>
+                    {
+                        FooterData.Center.Links.map((link, index)=>
+                        <Link key={index} _hover={{border:'none'}} as={NavLink} to={link.to}>{link.title}</Link>
+                        )
+                    }
                 </Stack>
             </Stack>
         </GridItem>
@@ -79,7 +81,7 @@ export default function Footer() {
             </SimpleGrid>
 
             <Divider height={'10px'} mb='10px' />
-            <Text textAlign='center' color='#e8e6e3'>Copyright © 2023 Trading School. All Rights Reserved</Text>
+            <Text textAlign='center' color='#e8e6e3'>{FooterData.CopyRight}</Text>
         </Container>
     )
 }

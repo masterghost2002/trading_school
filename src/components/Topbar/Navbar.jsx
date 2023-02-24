@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 import NavLinks from "./Components/NavLinks";
+import { NavLink } from "react-router-dom";
 import MobileDrawer from './Components/MobileDrawer';
 import { TopBarData } from "../../assests/data";
 export default function Navbar() {
@@ -48,7 +49,7 @@ export default function Navbar() {
                 
 
                 {/* hero secttion */}
-                <Link  _hover={{ border: '0px' }}>
+                <Link as={NavLink} to='/' _hover={{ border: '0px' }}>
                     <HeroSection />
                 </Link>
 
