@@ -40,16 +40,16 @@ export default function CourseCard(props) {
           </Box>
           <Box>
             <Heading size='sm' textTransform='uppercase'>
-              Details
+              Class Details
             </Heading>
             <Stack>
-              <DetailComponent heading='ClassDuration' value={props.data.ClassDuration} />
+              <DetailComponent heading='Duration' value={props.data.ClassDuration} />
             </Stack>
             <Stack>
-              <DetailComponent heading='ClassTiming' value={props.data.ClassTiming} />
+              <DetailComponent heading='Timing' value={props.data.ClassTiming} />
             </Stack>
             <Stack>
-              <DetailComponent heading='ModeOfLanguage' value={props.data.ModeOfLanguage} />
+              <DetailComponent heading='Language' value={props.data.ModeOfLanguage} />
             </Stack>
           </Box>
           <Box>
