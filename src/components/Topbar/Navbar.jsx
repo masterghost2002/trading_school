@@ -6,14 +6,13 @@ import {
     useColorMode,
     Box,
     IconButton,
-    Text,
     Link
 } from '@chakra-ui/react';
 import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 import NavLinks from "./Components/NavLinks";
 import { NavLink } from "react-router-dom";
 import MobileDrawer from './Components/MobileDrawer';
-import { TopBarData } from "../../assests/data";
+import HeroLogo from "./Components/HeroLogo";
 export default function Navbar() {
     const { colorMode, toggleColorMode } = useColorMode();
     const [navShadow, setNavShadow] = useState(false);
@@ -50,7 +49,7 @@ export default function Navbar() {
 
                 {/* hero secttion */}
                 <Link as={NavLink} to='/' _hover={{ border: '0px' }}>
-                    <HeroSection />
+                    <HeroLogo/>
                 </Link>
 
                 {/* links navigation */}
@@ -73,23 +72,4 @@ export default function Navbar() {
             </Flex>
         </chakra.header>
     );
-}
-const HeroSection = () => {
-    const { colorMode } = useColorMode();
-    return (
-        <>
-            <HStack display={{ base: 'flex', md: 'flex' }} fontWeight={600} fontSize={{base:'2xl', md:'30px'}}>
-                <Text
-                    color='blue.500'
-                >
-                    {TopBarData.NavBar.HeroLg.first}
-                </Text>
-                <Text
-                    color={colorMode === 'light' ? 'black' : 'white'}
-                >
-                    {TopBarData.NavBar.HeroLg.second}
-                </Text>
-            </HStack>
-        </>
-    )
 }

@@ -26,7 +26,7 @@ export default function Courses() {
       <SimpleGrid columns={2} columnGap={10} rowGap={10} py={[10, 10]}>
         {
           CoursesData.Courses.map((course, index) =>
-            <GridItem key={index} colSpan={[2, 2, 1]} px={[2, 5, 10]}>
+            <GridItem key={index} colSpan={[2, 2, 1]} px={[2,2, 5, 10]}>
               <CourseCard data={course} />
             </GridItem>
           )
@@ -34,10 +34,10 @@ export default function Courses() {
       </SimpleGrid>
       <Heading color={'purple.400'}>What will you Learn?</Heading>
       <Divider  my={5}/>
-      <SimpleGrid columns={2} columnGap={10} rowGap={10} py={[5, 5]}>
+      <SimpleGrid columns={2} columnGap={10} rowGap={10} py={[5, 5]} data-aos="fade-up">
         {
            CoursesData.WhatYouLearn.map((item, index) =>
-            <GridItem key={index} colSpan={[2, 2, 1]} px={[2, 5, 20]}>
+            <GridItem key={index} colSpan={[2, 2, 1]} px={[2,2, 5, 20]}>
               <Heading fontSize={'20px'} key={index} color='gray.500'>{item}</Heading>
             </GridItem>
           )

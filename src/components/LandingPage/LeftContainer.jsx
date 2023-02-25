@@ -1,9 +1,10 @@
-import { Container, VStack, Button, Link, HStack, Heading } from "@chakra-ui/react";
+import { Container, VStack, Button,HStack, Heading } from "@chakra-ui/react";
 import Typewriter from 'typewriter-effect';
 import { Home } from "../../assests/data";
+import { NavLink } from "react-router-dom";
 import HeroLogo from "./HeroLogo";
 const LinkButton = (props) =>
-    <Button as={Link} html={props.to} p={6} colorScheme={props.colorScheme} variant={props.variant}>
+    <Button as={NavLink} to={props.to} p={6} colorScheme={props.colorScheme} variant={props.variant}>
         {props.title}
     </Button>
 export default function LeftContainer() {
@@ -29,7 +30,7 @@ export default function LeftContainer() {
                         <LinkButton
                             key={index}
                             title={button.title}
-                            to={button.title} 
+                            to={button.to} 
                             colorScheme={button.colorScheme}
                             variant = {button.variant}
                         />

@@ -1,26 +1,25 @@
 
-import { useDisclosure, Flex,  Button, VStack} from "@chakra-ui/react";
-import Drawer from './Drawer';
+import { useDisclosure, Flex, Button, VStack } from "@chakra-ui/react";
+import ModalMobile from "./ModalMobile";
 import { RiMenu3Fill } from 'react-icons/ri';
 import React from "react";
 import NavLinks from "./NavLinks";
 export default function MobileDrawer() {
-    
+
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef(); return (
         <Flex display={{ base: "flex", md: "none" }} >
             <Button ref={btnRef} onClick={onOpen} bg='transparent' aria-label="menu">
-                <RiMenu3Fill size="26px"  />
+                <RiMenu3Fill size="26px" />
             </Button>
-            <Drawer
-                isOpen={isOpen}
-                onClose={onClose}
-                finalFocusRef={btnRef}
+            <ModalMobile
+                  isOpen={isOpen}
+                  onClose={onClose}
             >
-                <VStack alignItems="center" fontSize='20px'>
-                        <NavLinks onClose={onClose}/>
+                <VStack alignItems="center" spacing={10}>
+                    <NavLinks onClose={onClose} />
                 </VStack>
-            </Drawer>
+            </ModalMobile>
         </Flex>
     );
 };

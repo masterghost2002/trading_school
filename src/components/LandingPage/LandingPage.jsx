@@ -1,13 +1,12 @@
-import { SimpleGrid, GridItem, useColorMode, Container } from "@chakra-ui/react";
+import { SimpleGrid, GridItem, useColorModeValue, Container } from "@chakra-ui/react";
 import LeftContainer from "./LeftContainer";
 import RightContainer from "./RightContainer";
 import useDimensions from "../../customhooks/useDimensions";
 export default function LandingPage() {
     const windowWidth = useDimensions().width;
-    const { colorMode } = useColorMode();
     return (
         <Container maxW={'xxl'}
-            backgroundColor={ colorMode === 'dark'?'#131516':'white' }
+        backgroundColor={useColorModeValue('white', '#131516')}
         >
             <SimpleGrid
                 columns={[2]}

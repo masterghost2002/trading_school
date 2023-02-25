@@ -1,4 +1,4 @@
-import { Card, CardBody, Heading, Stack, Box, Text, CardHeader, StackDivider, HStack, useColorMode, Button } from "@chakra-ui/react";
+import { Card, CardBody, Heading, Stack, Box, Text, CardHeader, StackDivider, HStack, useColorModeValue, Button } from "@chakra-ui/react";
 import { calculateDiscount } from "../../assests/data";
 const PriceContainer = ({ price, dPrice }) => {
   return (
@@ -20,9 +20,8 @@ const DetailComponent = (props)=>{
 }
 
 export default function CourseCard(props) {
-  const { colorMode } = useColorMode();
   return (
-    <Card backgroundColor={colorMode === 'dark' ? '#3C4048' : 'white'} borderRadius='12px'>
+    <Card backgroundColor={useColorModeValue('white', '#3C4048' )} borderRadius='12px' >
       <CardHeader>
         <Heading >{props.data.Type}</Heading>
       </CardHeader>

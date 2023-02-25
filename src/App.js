@@ -8,9 +8,10 @@ import { useEffect } from "react";
 function App() {
   useEffect(()=>{
     AOS.init({
-      offset:200,
-      duration: 900,
-      easing: 'ease-in-out-quart'
+      offset:100,
+      duration: 700,
+      easing: 'ease-in-out-quart',
+      once:true
     });
   })
   return (

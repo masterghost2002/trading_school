@@ -1,4 +1,4 @@
-import { SimpleGrid, GridItem, Heading, Container, Divider, useColorMode } from "@chakra-ui/react";
+import { SimpleGrid, GridItem, Heading, Container, Divider, useColorModeValue } from "@chakra-ui/react";
 import useDimensions from "../../customhooks/useDimensions";
 import EembedMap from "./EmbededMap";
 import AddressCard from './AddressCard';
@@ -19,11 +19,10 @@ const StyledItem = (props) => {
     )
 }
 export default function Address() {
-    const {colorMode} = useColorMode();
     return (
         <Container 
             maxW={'xxl'} 
-            backgroundColor={ colorMode === 'dark'?'#1a1a1a':'#f7f8fc' } 
+            backgroundColor={useColorModeValue('#f7f8fc', '#1a1a1a')}
             px={[2, 5, 10]}
             py={{base:'20px'}}
             >

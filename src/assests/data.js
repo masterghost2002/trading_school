@@ -70,8 +70,8 @@ export const CoursesData = {
         Type: "Online Course",
         Price: 6999,
         DiscountedPrice: 5999,
-        Overview: "Non interactive online class on Google Meet",
-        ClassDuration: "3 Months (Monday - Friday)",
+        Overview: "Non interactive online class on Zoom with mentor support",
+        ClassDuration: "Lifetime (Monday - Friday)",
         ClassTiming: "8:00 PM - 9:30 PM",
         ModeOfLanguage: 'Hinglish'
     },
@@ -80,7 +80,7 @@ export const CoursesData = {
         Price: 6999,
         DiscountedPrice: 5999,
         Overview: "Interactive offline class, do live trading",
-        ClassDuration: "3 Months (Monday - Friday)",
+        ClassDuration: "Lifetime (Monday - Friday)",
         ClassTiming: "10:00 AM to 4:00 PM",
         ModeOfLanguage: 'Hinglish'
     }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, useColorMode, Divider, SimpleGrid, GridItem, Text, Stack, Link } from '@chakra-ui/react';
+import { Container, useColorModeValue, Divider, SimpleGrid, GridItem, Text, Stack, Link } from '@chakra-ui/react';
 import HeroLogo from '../LandingPage/HeroLogo';
 import { NavLink } from 'react-router-dom';
 import { Slogan, FooterData} from '../../assests/data';
@@ -56,11 +56,10 @@ const RightSide = () => {
     )
 }
 export default function Footer() {
-    const { colorMode } = useColorMode();
     return (
         <Container
             maxW={'xxl'}
-            backgroundColor={colorMode === 'light' ? 'blue.500' : 'blue.600'}
+            backgroundColor={useColorModeValue('blue.400', 'blue.500')}
             display='flex'
             flexDirection='column'
             alignItems='space-between'
