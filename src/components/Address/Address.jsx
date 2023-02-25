@@ -26,7 +26,7 @@ export default function Address() {
             px={[2, 5, 10]}
             py={{base:'20px'}}
             >
-            <Heading>Reach Out to us</Heading>
+            <Heading>{AddressData.Heading}</Heading>
             <Divider height='20px' />
             <SimpleGrid
                 columns={[2]}
@@ -40,7 +40,7 @@ export default function Address() {
 
                 <StyledItem 
                     order={true} 
-                    child = {<AddressCard data={AddressData.addressCard}  />}
+                    child = {<AddressCard data={AddressData.addressCard}  heading = {AddressData.CardHeading} cardImage={AddressData.CardImage}/>}
                 />
             </SimpleGrid>
         </Container>

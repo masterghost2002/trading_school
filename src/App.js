@@ -12,7 +12,7 @@ function App() {
       duration: 700,
       easing: 'ease-in-out-quart',
       once:true
-    });
+    }, []);
   })
   return (
     <>

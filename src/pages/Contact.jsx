@@ -2,7 +2,6 @@ import {
     Image,
     VStack, SimpleGrid,
     GridItem, Box,
-
     Container,
     useColorModeValue,
     Heading
