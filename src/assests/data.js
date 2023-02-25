@@ -102,6 +102,15 @@ export const CoursesData = {
         ClassDuration: "Lifetime (Monday - Friday)",
         ClassTiming: "10:00 AM to 4:00 PM",
         ModeOfLanguage: 'Hinglish'
+    },
+    {
+        Type: "Join Telegram Channel",
+        Price: 2999,
+        DiscountedPrice: 1989,
+        Overview: "Join your telegram channel to get stocks update",
+        ClassDuration: "Lifetime (Monday - Friday)",
+        ClassTiming: "10:00 AM to 4:00 PM",
+        ModeOfLanguage: 'Hinglish'
     }
     ],
     WhatYouLearn:[

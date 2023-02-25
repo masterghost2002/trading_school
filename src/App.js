@@ -4,22 +4,31 @@ import Footer from "./components/Footer/Footer";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import NavRouter from "./NavRouter";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Splash from "./components/Splash";
 function App() {
-  useEffect(()=>{
+  const [showSplash, setShowSplash] = useState(true);
+  useEffect(() => {
     AOS.init({
-      offset:100,
+      offset: 100,
       duration: 700,
       easing: 'ease-in-out-quart',
-      once:true
+      once: true
     }, []);
+    setTimeout(() => setShowSplash(false), 2000);
+    return () => { }
   })
   return (
     <>
-      <Banner />
-      <Navbar />
-      <NavRouter/>
-      <Footer/>
+      {showSplash ? <Splash /> :
+        <>
+          <Banner />
+          <Navbar />
+          <NavRouter />
+          <Footer />
+        </>
+      }
+
     </>
   );
 }
