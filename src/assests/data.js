@@ -1,4 +1,8 @@
 // common functions
+import { AiFillInstagram,AiFillFacebook,  AiOutlineTwitter} from 'react-icons/ai';
+import {IoLogoWhatsapp} from 'react-icons/io';
+
+
 export const calculateDiscount = (val1, val2) => {
     let diff = Math.abs(val1 - val2);
     let avg = (val1 + val2) / 2;
@@ -110,3 +114,43 @@ export const FooterData = {
     },
     CopyRight:'Copyright © 2023 Trading School. All Rights Reserved'
 }
+
+export const Socials = [
+    {to:'https://www.instagram.com/trading_school_rohtak/', child: <AiFillInstagram />},
+    {to:'https://wa.me/+917015257395', child: <IoLogoWhatsapp />},
+    {to:'https://wa.me/+917015257395', child: <AiFillFacebook/>},
+    {to:'https://wa.me/+917015257395', child: <AiOutlineTwitter/>}
+];
+
+export const ContactFormData = [
+    {
+        label:"Full Name",
+        name:"fullname",
+        isRequired:true,
+        type:'text',
+        variant:'flushed',
+        placeholder:'Your full name',
+        fontSize:'24px',
+        fontWeight:600
+    },
+    {
+        label:"Email",
+        name:"email",
+        isRequired:false,
+        type:'text',
+        variant:'flushed',
+        placeholder:'Your email address',
+        fontSize:'24px',
+        fontWeight:600
+    },
+    {
+        label:"Phone",
+        name:"phone",
+        isRequired:true,
+        type:'text',
+        variant:'flushed',
+        placeholder:'Your mobile number /Whats app Number',
+        fontSize:'24px',
+        fontWeight:600
+    }
+]

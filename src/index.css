@@ -27,3 +27,8 @@ html {
 #blur{
   backdrop-filter: blur(5px);
 }
+#customModal{
+  display: flex;
+  flex-direction: column;
+  justify-content: 'space-between';
+}

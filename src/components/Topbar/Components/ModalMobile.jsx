@@ -5,10 +5,10 @@ export default function ModalMobile({ isOpen, onClose, children }) {
       <>  
         <Modal isOpen={isOpen} onClose={onClose} size='full' >
           <ModalOverlay />
-          <ModalContent backgroundColor={useColorModeValue('white', '#131516')}>
+          <ModalContent backgroundColor={useColorModeValue('white', '#131516')} >
             <ModalHeader><HeroLogo/></ModalHeader>
             <ModalCloseButton />
-            <ModalBody>
+            <ModalBody display='flex' flexDirection='column' justifyContent='space-between'>
               {children}
             </ModalBody>
           </ModalContent>
