@@ -2,7 +2,8 @@
 import { AiFillInstagram,AiFillFacebook,  AiOutlineTwitter} from 'react-icons/ai';
 import {IoLogoWhatsapp} from 'react-icons/io';
 import AddressCardImage from './images/trading_school.jpeg';
-
+import PolygonBg from './images/polygon2.png';
+import FounderImage from './images/founderImage.jpeg';
 export const calculateDiscount = (val1, val2) => {
     let diff = Math.abs(val1 - val2);
     let avg = (val1 + val2) / 2;
@@ -89,29 +90,43 @@ export const CoursesData = {
         Type: "Online Course",
         Price: 6999,
         DiscountedPrice: 5999,
-        Overview: "Non interactive online class on Zoom with mentor support",
-        ClassDuration: "Lifetime (Monday - Friday)",
-        ClassTiming: "8:00 PM - 9:30 PM",
-        ModeOfLanguage: 'Hinglish'
+        Overview: {heading: "Overview", content:"Non interactive online class on Zoom with mentor support"},
+        Details:{
+            heading:"Class Details", 
+            content: [
+                    {heading:"Class Duration", content:"Lifetime (Monday - Friday)"},
+                    {heading:"Class Timing", content:"8:00 PM - 9:30 PM"},
+                    {heading:"Language", content:"Hinglish"},
+                ]
+        }   
     },
     {
         Type: "Offline Course",
         Price: 6999,
         DiscountedPrice: 5999,
-        Overview: "Interactive offline class, do live trading",
-        ClassDuration: "Lifetime (Monday - Friday)",
-        ClassTiming: "10:00 AM to 4:00 PM",
-        ModeOfLanguage: 'Hinglish'
+        Overview: {heading: "Overview", content:"Interactive offline class, with live trading"},
+        Details:{
+            heading:"Class Details", 
+            content: [
+                    {heading:"Class Duration", content:"Lifetime (Monday - Friday)"},
+                    {heading:"Class Timing", content:"10:00 AM to 4:00 PM"},
+                    {heading:"Language", content:"Hinglish"},
+                ]
+        }   
     },
     {
-        Type: "Join Telegram Channel",
+        Type: "Telegram Channel",
         Price: 2999,
         DiscountedPrice: 1989,
-        Overview: "Join your telegram channel to get stocks update",
-        ClassDuration: "Lifetime (Monday - Friday)",
-        ClassTiming: "10:00 AM to 4:00 PM",
-        ModeOfLanguage: 'Hinglish'
-    }
+        Overview: {heading: "Overview", content:"Daily Live trade with logic behind them"},
+        Details:{
+            heading:"Channel Details", 
+            content: [
+                    {heading:"Language", content:"Hinglish"},
+                    {heading:"Duration", content:"1 Month"}
+                ]
+        }   
+    },
     ],
     WhatYouLearn:[
         'Share Market Basic and Advance',
@@ -178,3 +193,27 @@ export const ContactFormData = [
         fontWeight:600
     }
 ]
+
+export const AboutData = {
+    Header:{
+        image:PolygonBg,
+        details:[
+            {
+                heading:"Our Vision",
+                content:"This is an effort to empower the Indian citizens, through guided investing - in one of the best asset classes in the world i.e. the stock market. As per National Securities Depository Limited, out of a population of 125 crore, the Demat account holders in India are less than 1.5 crore. Our aim to increase this number by guiding them to invest wisely, for maximum profits. We help them become financial literate, via online/offline workshops PAN India."
+            },
+            {
+                heading:"Why we?",
+                content:"We are not just another run-of-the-mill company offering Stock and financial courses. Our vision is to enhance your knowledge to a new level altogether. To make this possible, we use our domain expertise, and the application of the best technologies, to make learning convenient, effective, and affordable for all. The courses we offer are designed to offer unmatched expertise and thus benefit our student"
+            }
+        ]
+    },
+    Founder:{
+        image:FounderImage,
+        name:"Yogesh Ahlawat",
+        overview:"Founder -Trading Schoool, Instructor",
+        info:["Yogesh holds a bachelor's degree inscience from the Jatt college Rohtak .He has a passion to thrive as a financial planner and investment adviser to help people create wealth.",
+            "Although he started as a ssc aspirat , after qualifying exams like CGL, CHSLit wasn’t long before yogesh’s long standing passion drove him to choose stock trading as his profession."
+        ]
+    }
+}

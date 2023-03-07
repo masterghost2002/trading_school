@@ -10,18 +10,18 @@ const PriceContainer = ({ price, dPrice }) => {
   )
 
 }
-const DetailComponent = (props)=>{
+const DetailComponent = (props) => {
   return (
-      <HStack  pt={1} justifyContent='space-between'>
-        <Text fontWeight={600} color={'gray.500'}>{props.heading}</Text>
-        <Text  color={'gray.400'} fontWeight={600}>{props.value}</Text>
-      </HStack>
+    <HStack pt={1} justifyContent='space-between'>
+      <Text fontWeight={600} color={'gray.500'}>{props.heading}</Text>
+      <Text color={'gray.400'} fontWeight={600}>{props.value}</Text>
+    </HStack>
   )
 }
 
 export default function CourseCard(props) {
   return (
-    <Card backgroundColor={useColorModeValue('white', '#3C4048' )} borderRadius='12px' >
+    <Card backgroundColor={useColorModeValue('white', '#3C4048')} borderRadius='12px' >
       <CardHeader>
         <Heading >{props.data.Type}</Heading>
       </CardHeader>
@@ -30,25 +30,24 @@ export default function CourseCard(props) {
           <PriceContainer price={props.data.Price} dPrice={props.data.DiscountedPrice} />
           <Box>
             <Heading size='sm' textTransform='uppercase' >
-              Overview
+              {props.data.Overview.heading}
             </Heading>
             <Text pt='2' color='gray.400' fontWeight={600}>
-              {props.data.Overview}
+              {props.data.Overview.content}
             </Text>
           </Box>
           <Box>
             <Heading size='sm' textTransform='uppercase'>
-              Class Details
+              {props.data.Details.heading}
             </Heading>
-            <Stack>
-              <DetailComponent heading='Duration' value={props.data.ClassDuration} />
-            </Stack>
-            <Stack>
-              <DetailComponent heading='Timing' value={props.data.ClassTiming} />
-            </Stack>
-            <Stack>
-              <DetailComponent heading='Language' value={props.data.ModeOfLanguage} />
-            </Stack>
+            {
+              props.data.Details.content.map((detail, index) =>
+                <Stack key={index}>
+                  <DetailComponent heading={detail.heading} value={detail.content} />
+                </Stack>
+              )
+            }
+  
           </Box>
           <Box>
             <Button colorScheme={'purple'}>Enroll Now</Button>
