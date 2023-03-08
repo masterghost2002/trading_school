@@ -10,7 +10,7 @@ const LinkButton = (props) =>
 export default function LeftContainer() {
     return (
         <Container  display='flex' alignItems='center' height='100%' p={0}  maxW={'100%'}>
-            <VStack width='100%' alignItems='flex-start'  data-aos="slide-left">
+            <VStack width='100%' alignItems='flex-start'  data-aos="slide-right">
                 <HeroLogo color= 'blue.400' fontSize = {{base:'40px', md:'70px', lg:'70px'}}  />
                 <Heading color={'purple.400'}
                     fontWeight='600'
