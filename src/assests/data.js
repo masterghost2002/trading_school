@@ -94,11 +94,21 @@ export const CoursesData = {
         Details:{
             heading:"Class Details", 
             content: [
-                    {heading:"Class Duration", content:"Lifetime (Monday - Friday)"},
-                    {heading:"Class Timing", content:"8:00 PM - 9:30 PM"},
+                    {heading:"Duration", content:"Lifetime (Monday - Friday)"},
+                    {heading:"Timing", content:"8:00 PM - 9:30 PM"},
                     {heading:"Language", content:"Hinglish"},
                 ]
-        }   
+        },
+        EnrollSteps:[
+            "Pay using the pay button.",
+            "Took the payment screenshot and send to our WhatsApp number along with your details",
+            "Verfication will be done within 12Hr after that you will recive your class details within 24Hr over mail or provided whats app number",
+            "More over you can came to us and pay your fee offline will do the rest of the things for you."
+        ],
+        Payment:{
+            heading:"Pay Now",
+            to:'https://web.fankonnect.com/g/2068'
+        }
     },
     {
         Type: "Offline Course",
@@ -108,11 +118,21 @@ export const CoursesData = {
         Details:{
             heading:"Class Details", 
             content: [
-                    {heading:"Class Duration", content:"Lifetime (Monday - Friday)"},
-                    {heading:"Class Timing", content:"10:00 AM to 4:00 PM"},
+                    {heading:"Duration", content:"Lifetime (Monday - Friday)"},
+                    {heading:"Timing", content:"10:00 AM to 4:00 PM"},
                     {heading:"Language", content:"Hinglish"},
                 ]
-        }   
+        },
+        EnrollSteps:[
+            "Pay using the pay button.",
+            "Took the payment screenshot and send to our WhatsApp number along with your details",
+            "After that you can join the classes same day after payment verification.",
+            "More over you can came to us and pay your fee offline will do the rest of the things for you."
+        ],
+        Payment:{
+            heading:"Pay Now",
+            to:'https://web.fankonnect.com/g/2068'
+        }
     },
     {
         Type: "Telegram Channel",
@@ -125,7 +145,16 @@ export const CoursesData = {
                     {heading:"Language", content:"Hinglish"},
                     {heading:"Duration", content:"1 Month"}
                 ]
-        }   
+        }, 
+        EnrollSteps:[
+            "Pay using the pay button.",
+            "After successful payment, you’ll get the invite link via SMS to join the exclusive channel within 2 hours. You can join the channel through that link.",
+            "More over you can came to us and pay your fee offline will do the rest of the things for you."
+        ],
+        Payment:{
+            heading:"Pay Now",
+            to:'https://web.fankonnect.com/g/1712'
+        }
     },
     ],
     WhatYouLearn:[
@@ -154,9 +183,12 @@ export const FooterData = {
     CopyRight:'Copyright © 2023 Trading School. All Rights Reserved'
 }
 
+export const SocialWhatsApp = {
+    to:'https://wa.me/+917015257395', child: <IoLogoWhatsapp />
+}
 export const Socials = [
     {to:'https://www.instagram.com/trading_school_rohtak/', child: <AiFillInstagram />},
-    {to:'https://wa.me/+917015257395', child: <IoLogoWhatsapp />},
+    SocialWhatsApp,
     {to:'https://wa.me/+917015257395', child: <AiFillFacebook/>},
     {to:'https://wa.me/+917015257395', child: <AiOutlineTwitter/>}
 ];
@@ -211,7 +243,7 @@ export const AboutData = {
     Founder:{
         image:FounderImage,
         name:"Yogesh Ahlawat",
-        overview:"Founder -Trading Schoool, Instructor",
+        overview:"Founder -Trading Schoool, Instructor, CGL Qualified",
         info:["Yogesh holds a bachelor's degree inscience from the Jatt college Rohtak .He has a passion to thrive as a financial planner and investment adviser to help people create wealth.",
             "Although he started as a ssc aspirat , after qualifying exams like CGL, CHSLit wasn’t long before yogesh’s long standing passion drove him to choose stock trading as his profession."
         ]

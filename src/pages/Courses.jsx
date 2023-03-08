@@ -19,7 +19,7 @@ export default function Courses() {
     <Container
       maxW={'xxl'}
       backgroundColor={colorMode === 'dark' ? '#131516' : '#f9fafb'}
-      p={[2, 5, 10]}
+      px={[5,5,10,20]}
 
     >
       <Header />

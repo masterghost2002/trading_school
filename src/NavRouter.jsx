@@ -4,6 +4,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Courses from "./pages/Courses";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Faq from "./pages/Faq";
 export default function NavRouter() {
   return (
    <Routes>
@@ -12,6 +13,7 @@ export default function NavRouter() {
     <Route path="/courses" element={<Courses/>}></Route>
     <Route path="/contact" element={<Contact/>}></Route>
     <Route path="/about" element={<About/>}/>
+    <Route path="/faq" element={<Faq/>}/>
    </Routes>
   )
 }

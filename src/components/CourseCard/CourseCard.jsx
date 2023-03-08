@@ -1,5 +1,9 @@
-import { Card, CardBody, Heading, Stack, Box, Text, CardHeader, StackDivider, HStack, useColorModeValue, Button } from "@chakra-ui/react";
+import { Card, CardBody, Heading, Stack, List, ListItem, ListIcon, Box, Text, CardHeader, useDisclosure, StackDivider, HStack, useColorModeValue, Button, Link } from "@chakra-ui/react";
 import { calculateDiscount } from "../../assests/data";
+import VerticallyCenterModal from '../Modal/VerticallyCenterModal';
+import StepsFoot from "../CustomIcons/StepsFoot";
+import { SiRazorpay } from "react-icons/si";
+import { SocialWhatsApp } from "../../assests/data";
 const PriceContainer = ({ price, dPrice }) => {
   return (
     <HStack>
@@ -13,15 +17,39 @@ const PriceContainer = ({ price, dPrice }) => {
 const DetailComponent = (props) => {
   return (
     <HStack pt={1} justifyContent='space-between'>
-      <Text fontWeight={600} color={'gray.500'}>{props.heading}</Text>
-      <Text color={'gray.400'} fontWeight={600}>{props.value}</Text>
+      <Text fontWeight={500} color={'gray.500'}>{props.heading}</Text>
+      <Text color={'gray.400'} fontWeight={500}>{props.value}</Text>
     </HStack>
   )
 }
-
-export default function CourseCard(props) {
+const EnrollSteps = (props) => {
+  return (<List spacing={3} fontFamily={`'Poppins', sans-serif`}>
+    {
+      props.data.map((steps, index) =>
+        <ListItem key={index} fontSize={'xl'}>
+          <ListIcon ><StepsFoot color='#48BB78' /></ListIcon>
+          {steps}
+        </ListItem>
+      )
+    }
+  </List>)
+}
+const ModalFooter = (props) => {
   return (
-    <Card backgroundColor={useColorModeValue('white', '#3C4048')} borderRadius='12px' >
+    <>
+      <Link href={SocialWhatsApp.to} isExternal fontSize={'24px'}>
+        {SocialWhatsApp.child}
+      </Link>
+      <Button href={props.data.to} isExternal colorScheme='green' as={Link} rightIcon={<SiRazorpay />} _hover={{ textDecoration: 'none' }}>
+        {props.data.heading}
+      </Button>
+    </>
+  )
+}
+export default function CourseCard(props) {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  return (
+    <Card backgroundColor={useColorModeValue('white', '#3C4048')} borderRadius='12px' data-aos="fade-up" overflowX={"hidden"}>
       <CardHeader>
         <Heading >{props.data.Type}</Heading>
       </CardHeader>
@@ -47,10 +75,20 @@ export default function CourseCard(props) {
                 </Stack>
               )
             }
-  
+
           </Box>
           <Box>
-            <Button colorScheme={'purple'}>Enroll Now</Button>
+            <Button colorScheme={'purple'} onClick={onOpen}>Enroll Now</Button>
+            <VerticallyCenterModal
+              isOpen={isOpen}
+              onOpen={onOpen}
+              onClose={onClose}
+              children={<EnrollSteps data={props.data.EnrollSteps} />}
+              heading="Enroll Steps"
+              hfs='3xl'
+              bg={useColorModeValue('white', '#3C4048')}
+              footer={<ModalFooter data={props.data.Payment} />}
+            />
           </Box>
         </Stack>
       </CardBody>

@@ -7,12 +7,13 @@ const StyledItem = (props) => {
     const windowWidth = useDimensions().width;
     return (
         <GridItem
+            data-aos="zoom-in-up"
             colSpan={[2, 2, 1]}
             order={props.order && windowWidth <= 860 ? 1 : 0}
             display='flex'
             alignItems='center'
             justifyContent='center'
-            padding={windowWidth >= 800?20:2}
+            padding={windowWidth >= 800?10:2}
         >
             {props.child}
         </GridItem>
@@ -23,7 +24,7 @@ export default function Address() {
         <Container 
             maxW={'xxl'} 
             backgroundColor={useColorModeValue('#f7f8fc', '#1a1a1a')}
-            px={[2, 5, 10]}
+            px={[5,5,10,20]}
             py={{base:'20px'}}
             >
             <Heading>{AddressData.Heading}</Heading>
@@ -40,6 +41,7 @@ export default function Address() {
 
                 <StyledItem 
                     order={true} 
+                
                     child = {<AddressCard data={AddressData.addressCard}  heading = {AddressData.CardHeading} cardImage={AddressData.CardImage}/>}
                 />
             </SimpleGrid>

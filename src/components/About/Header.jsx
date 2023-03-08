@@ -16,7 +16,7 @@ export default function Header(props) {
     return (
         <Container
             maxW={'xxl'}
-            p={0}
+            px={[5,5,10,20]}
             backgroundRepeat="no-repeat"
             backgroundAttachment={'fixed'}
             backgroundImage={props.data.image}

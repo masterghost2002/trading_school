@@ -8,7 +8,6 @@ export default function Home() {
         <Container 
             maxW={'xxl'} 
             p={0}
-
             backgroundColor={useColorModeValue('white', '#131516')}
         >
             <LandingPage/>

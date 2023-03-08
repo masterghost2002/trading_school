@@ -13,10 +13,13 @@ import NavLinks from "./Components/NavLinks";
 import { NavLink } from "react-router-dom";
 import MobileDrawer from './Components/MobileDrawer';
 import HeroLogo from "./Components/HeroLogo";
+function scroll_to_top(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 export default function Navbar() {
     const { colorMode, toggleColorMode } = useColorMode();
     const [navShadow, setNavShadow] = useState(false);
-
     window.onscroll = function () {
         //dynamically get the top-badge height to net navbar shadow
         const ele = document.getElementById('top-badge');
@@ -26,7 +29,7 @@ export default function Navbar() {
             setNavShadow(false);
 
     }
-
+    
 
     return (
         <chakra.header 
@@ -39,7 +42,7 @@ export default function Navbar() {
             >
             <Flex as="header"
                 w="100%"
-                px="6"
+                px={[5,5,10,20]}
                 py={['6', '4']}
                 align="center"
                 justify="space-between"
@@ -48,13 +51,13 @@ export default function Navbar() {
                 
 
                 {/* hero secttion */}
-                <Link as={NavLink} to='/' _hover={{ border: '0px' }}>
+                <Link as={NavLink} to='/' _hover={{ border: '0px' }} onClick={scroll_to_top}>
                     <HeroLogo/>
                 </Link>
 
                 {/* links navigation */}
                 <HStack as="nav" spacing="5" display={{ base: "none", md: "flex" }} bg='transparent' >
-                    <NavLinks />
+                    <NavLinks handleClick = {scroll_to_top} />
                 </HStack>
 
 
@@ -67,7 +70,7 @@ export default function Navbar() {
                             aria-label="themeSwitcher"
                         />
                     </Box>
-                    <MobileDrawer display={{ base: "flex", md: "none" }} bg='transparent' />
+                    <MobileDrawer display={{ base: "flex", md: "none" }} bg='transparent' scroll_to_top = {scroll_to_top} />
                 </HStack>
             </Flex>
         </chakra.header>

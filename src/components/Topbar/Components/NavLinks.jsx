@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import { Button, Link, useColorMode } from '@chakra-ui/react';
+import { Link, useColorMode } from '@chakra-ui/react';
 import { TopBarData } from '../../../assests/data';
 
 function returnStyle(colorMode) {
@@ -18,7 +18,6 @@ function returnStyle(colorMode) {
 export default function NavLinks(props) {
     const { colorMode } = useColorMode();
     const style = returnStyle(colorMode);
-
     return (
         <>
             {TopBarData.NavBar.Links.map((link, index) =>
@@ -29,8 +28,9 @@ export default function NavLinks(props) {
                     color={style._non_active_link.color}
                     _activeLink={style._active_link}
                     _hover={style._hover}
+                    onClick={props.handleClick}
                 >
-                    <Button variant="nav" onClick={props.onClose}>{link.linkName}</Button>
+                    {link.linkName}
                 </Link>
             )}
         </>

@@ -42,7 +42,7 @@ export default function Contact() {
                 overflowY='hidden'
                 objectFit='cover'
             />
-            <Container  maxW='xxl' px={[2,5,10, 20]}>
+            <Container  maxW='xxl' px={[5,5,10,20]}>
                 <SimpleGrid
                     columns={3}
                     columnGap={5}
