@@ -1,9 +1,14 @@
 import React from 'react'
-import { Container, useColorModeValue, Divider, SimpleGrid, GridItem, Text, Stack, Link } from '@chakra-ui/react';
+import { Container, useColorModeValue, Divider, SimpleGrid, GridItem, Text, Stack, Link,HStack } from '@chakra-ui/react';
 import HeroLogo from '../LandingPage/HeroLogo';
 import { NavLink } from 'react-router-dom';
-import { Slogan, FooterData} from '../../assests/data';
+import { Slogan, FooterData } from '../../assests/data';
 import { Email } from '../../assests/data';
+import { Socials } from '../../assests/data';
+function scroll_to_top() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 const LeftSide = () => {
     return (
         <GridItem colSpan={[3, 3, 1]}
@@ -25,14 +30,14 @@ const Center = () => {
             display='flex'
             flexDirection='column'
             alignItems='center'
-            
+
         >
             <Stack spacing={5}>
                 <Text fontWeight={600}>{FooterData.Center.Header}</Text>
                 <Stack fontWeight={500}>
                     {
-                        FooterData.Center.Links.map((link, index)=>
-                        <Link key={index} _hover={{border:'none'}} as={NavLink} to={link.to}>{link.title}</Link>
+                        FooterData.Center.Links.map((link, index) =>
+                            <Link key={index} _hover={{ border: 'none' }} as={NavLink} to={link.to} onClick={scroll_to_top}>{link.title}</Link>
                         )
                     }
                 </Stack>
@@ -51,6 +56,15 @@ const RightSide = () => {
             <Stack spacing={5}>
                 <Text fontWeight={600}>GET IN TOUCH</Text>
                 <Text fontWeight={500}>{Email}</Text>
+                <HStack justifyContent={'space-between'} width={'100%'}>
+                    {
+                        Socials.map((social, index) =>
+                            <Link key={index} href={social.to} isExternal fontSize={'24px'}>
+                                {social.child}
+                            </Link>
+                        )
+                    }
+                </HStack>
             </Stack>
         </GridItem>
     )
@@ -65,7 +79,7 @@ export default function Footer() {
             alignItems='space-between'
             px={{ base: 0, md: 20 }}
             fontFamily={`'Montserrat', sans-serif`}
-            color = 'white'
+            color='white'
         >
             <SimpleGrid
                 flex='3'

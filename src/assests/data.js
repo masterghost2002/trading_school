@@ -249,3 +249,23 @@ export const AboutData = {
         ]
     }
 }
+
+export const FAQData = [
+    {
+        heading:"What happens after I make the payment?",
+        content:"After successful payment, you’ll get the invite link via SMS to join the exclusive channel within 2 hours. You can join the channel through that link."
+    },
+    {
+        heading:"What if I don’t get an invite link to the channel after successful payment?",
+        content:"If you don’t get an invite link to the channel even after payment, reach out to us on our support email-  support@fankonnect.com. Our team will help you in getting added to the group"
+    },
+    {
+        heading:"What is the refund policy?",
+        content:"Once you have made the payment and joined the channel, there won’t be any refund."
+    }
+    ,
+    {
+        heading:"I don’t have a Telegram account, so how can I join this group?",
+        content:"First, you will have to create an account on Telegram and then once you have purchased the channel subscription you will be given an invite link to join the channel via SMS."
+    }
+]

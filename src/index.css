@@ -15,11 +15,6 @@ code {
 html {
   scroll-behavior: smooth;
 }
-#header{
-  /* background-color: white; */
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(20px);
-}
 #backgroundImage{
   background-repeat: no-repeat;
   background-position-x: right;

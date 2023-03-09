@@ -29,6 +29,8 @@ export default function NavLinks(props) {
                     _activeLink={style._active_link}
                     _hover={style._hover}
                     onClick={props.handleClick}
+                    fontWeight={'600'}
+                    fontSize={'xl'}
                 >
                     {link.linkName}
                 </Link>

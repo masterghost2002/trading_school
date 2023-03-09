@@ -1,9 +1,16 @@
 import React from 'react'
-import { Container, Heading, Text , UnorderedList, ListItem, useColorMode} from '@chakra-ui/react'
+import { Container, Heading, Text , UnorderedList, ListItem, useColorModeValue} from '@chakra-ui/react';
+import { useDispatch } from "react-redux";
+import {navAction} from '../store/navstore';
+import { useEffect } from "react";
 export default function PrivacyPolicy() {
-    const {colorMode} = useColorMode();
+    const color = useColorModeValue('#f9fafb', '#1a1a1a');
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(navAction.setNavColor(color));
+    }, [color, dispatch]);
     return (
-        <Container maxW={'xxl'} p={[2,5,10]} backgroundColor={colorMode==='dark'?'#131516':'white'}>
+        <Container maxW={'xxl'} p={[2,5,10]} backgroundColor={color}  px={[5,5,10,20]} color='#837d71'  fontFamily={`'Rubik', sans-serif`}>
             <Heading pb={5}>Privacy Policy</Heading>
             <Text>Last updated: February 24, 2023</Text>
             <Text>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</Text>

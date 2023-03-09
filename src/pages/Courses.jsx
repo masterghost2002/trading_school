@@ -1,6 +1,9 @@
-import { Container, Heading, useColorMode, HStack, SimpleGrid, GridItem ,  Divider} from "@chakra-ui/react";
+import { Container, Heading, useColorModeValue, HStack, SimpleGrid, GridItem ,  Divider} from "@chakra-ui/react";
 import CourseCard from "../components/CourseCard/CourseCard";
 import { CoursesData} from "../assests/data";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import {navAction} from '../store/navstore';
 const Header = () => {
   return (
     <HStack justifyContent={'center'} py={5}>
@@ -14,13 +17,17 @@ const Header = () => {
   )
 }
 export default function Courses() {
-  const { colorMode } = useColorMode();
+  const color = useColorModeValue('#f9fafb', 'black');
+  const dispatch = useDispatch();
+  useEffect(()=>{
+    dispatch(navAction.setNavColor(color));
+  },[color, dispatch]);
   return (
     <Container
       maxW={'xxl'}
-      backgroundColor={colorMode === 'dark' ? '#131516' : '#f9fafb'}
+      backgroundColor = {color}
       px={[5,5,10,20]}
-
+      
     >
       <Header />
       <SimpleGrid columns={2} columnGap={10} rowGap={10} py={[10, 10]}>
@@ -34,7 +41,7 @@ export default function Courses() {
       </SimpleGrid>
       <Heading color={'purple.400'}>What will you Learn?</Heading>
       <Divider  my={5}/>
-      <SimpleGrid columns={2} columnGap={10} rowGap={10} py={[5, 5]} data-aos="fade-up">
+      <SimpleGrid columns={2} columnGap={10} rowGap={10} py={[5, 5]} data-aos="slide-up">
         {
            CoursesData.WhatYouLearn.map((item, index) =>
             <GridItem key={index} colSpan={[2, 2, 1]} px={[2,2, 5, 20]}>

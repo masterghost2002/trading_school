@@ -4,9 +4,11 @@ import RightContainer from "./RightContainer";
 import useDimensions from "../../customhooks/useDimensions";
 export default function LandingPage() {
     const windowWidth = useDimensions().width;
+   
     return (
         <Container maxW={'xxl'}
-        px={[5,5,10,20]}
+            px={[5, 5, 10, 20]}
+            id="animatedBg"
         >
             <SimpleGrid
                 columns={[2]}
@@ -14,7 +16,7 @@ export default function LandingPage() {
                 height={['auto', 'auto', 'auto', '100vh']}
                 rowGap={[5]}
                 py={5}
-                
+
 
             >
                 <GridItem colSpan={[2, 2, 1]} order={windowWidth <= 860 ? 1 : 0} p={0} >

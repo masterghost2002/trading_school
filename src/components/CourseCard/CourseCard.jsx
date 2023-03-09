@@ -49,7 +49,7 @@ const ModalFooter = (props) => {
 export default function CourseCard(props) {
   const { isOpen, onOpen, onClose } = useDisclosure()
   return (
-    <Card backgroundColor={useColorModeValue('white', '#3C4048')} borderRadius='12px' data-aos="fade-up" overflowX={"hidden"}>
+    <Card backgroundColor={useColorModeValue('white', '#3C4048')} borderRadius='12px'>
       <CardHeader>
         <Heading >{props.data.Type}</Heading>
       </CardHeader>

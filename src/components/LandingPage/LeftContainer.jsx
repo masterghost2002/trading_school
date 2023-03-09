@@ -4,7 +4,7 @@ import { Home } from "../../assests/data";
 import { NavLink } from "react-router-dom";
 import HeroLogo from "./HeroLogo";
 const LinkButton = (props) =>
-    <Button as={NavLink} to={props.to} p={6} colorScheme={props.colorScheme} variant={props.variant}>
+    <Button as={NavLink} to={props.to} p={[6, 8]} colorScheme={props.colorScheme} variant={props.variant} >
         {props.title}
     </Button>
 export default function LeftContainer() {

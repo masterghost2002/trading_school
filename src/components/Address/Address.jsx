@@ -7,7 +7,6 @@ const StyledItem = (props) => {
     const windowWidth = useDimensions().width;
     return (
         <GridItem
-            data-aos="zoom-in-up"
             colSpan={[2, 2, 1]}
             order={props.order && windowWidth <= 860 ? 1 : 0}
             display='flex'
@@ -27,7 +26,7 @@ export default function Address() {
             px={[5,5,10,20]}
             py={{base:'20px'}}
             >
-            <Heading>{AddressData.Heading}</Heading>
+            <Heading size={'2xl'}>{AddressData.Heading}</Heading>
             <Divider height='20px' />
             <SimpleGrid
                 columns={[2]}
