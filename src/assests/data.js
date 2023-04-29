@@ -98,6 +98,7 @@ export const CoursesData = {
                     {heading:"Duration", content:"1 Month"}
                 ]
         }, 
+        showEnroll:true,
         EnrollSteps:[
             "Pay using the pay button.",
             "After successful payment, you’ll get the invite link via SMS to join the exclusive channel within 2 hours. You can join the channel through that link.",
@@ -121,6 +122,7 @@ export const CoursesData = {
                     {heading:"Language", content:"Hinglish"},
                 ]
         },
+        showEnroll:false,
         EnrollSteps:[
             "Pay using the pay button.",
             "Took the payment screenshot and send to our WhatsApp number along with your details",
@@ -145,6 +147,7 @@ export const CoursesData = {
                     {heading:"Language", content:"Hinglish"},
                 ]
         },
+        showEnroll:false,
         EnrollSteps:[
             "Pay using the pay button.",
             "Took the payment screenshot and send to our WhatsApp number along with your details",
