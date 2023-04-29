@@ -47,7 +47,8 @@ const ModalFooter = (props) => {
   )
 }
 export default function CourseCard(props) {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const boxBg = useColorModeValue('white', '#3C4048');
   return (
     <Card backgroundColor={useColorModeValue('white', '#3C4048')} borderRadius='12px'>
       <CardHeader>
@@ -86,7 +87,7 @@ export default function CourseCard(props) {
               children={<EnrollSteps data={props.data.EnrollSteps} />}
               heading="Enroll Steps"
               hfs='3xl'
-              bg={useColorModeValue('white', '#3C4048')}
+              bg={boxBg}
               footer={<ModalFooter data={props.data.Payment} />}
             />
           </Box>}
