@@ -86,6 +86,28 @@ export const AddressData = {
 }
 export const CoursesData = {
     Courses: [
+        {
+        Type: "Telegram Channel",
+        Price: 1499,
+        DiscountedPrice: 999,
+        Overview: {heading: "Overview", content:"Daily Live trade with logic behind them"},
+        Details:{
+            heading:"Channel Details", 
+            content: [
+                    {heading:"Language", content:"Hinglish"},
+                    {heading:"Duration", content:"1 Month"}
+                ]
+        }, 
+        EnrollSteps:[
+            "Pay using the pay button.",
+            "After successful payment, you’ll get the invite link via SMS to join the exclusive channel within 2 hours. You can join the channel through that link.",
+            "More over you can came to us and pay your fee offline will do the rest of the things for you."
+        ],
+        Payment:{
+            heading:"Pay Now",
+            to:'https://rpy.club/g/ZOIPTYOA5B'
+        }
+    },
     {
         Type: "Online Course",
         Price: 6999,
@@ -134,28 +156,7 @@ export const CoursesData = {
             to:'https://web.fankonnect.com/g/2068'
         }
     },
-    {
-        Type: "Telegram Channel",
-        Price: 2999,
-        DiscountedPrice: 1989,
-        Overview: {heading: "Overview", content:"Daily Live trade with logic behind them"},
-        Details:{
-            heading:"Channel Details", 
-            content: [
-                    {heading:"Language", content:"Hinglish"},
-                    {heading:"Duration", content:"1 Month"}
-                ]
-        }, 
-        EnrollSteps:[
-            "Pay using the pay button.",
-            "After successful payment, you’ll get the invite link via SMS to join the exclusive channel within 2 hours. You can join the channel through that link.",
-            "More over you can came to us and pay your fee offline will do the rest of the things for you."
-        ],
-        Payment:{
-            heading:"Pay Now",
-            to:'https://web.fankonnect.com/g/1712'
-        }
-    },
+    
     ],
     WhatYouLearn:[
         'Share Market Basic and Advance',
