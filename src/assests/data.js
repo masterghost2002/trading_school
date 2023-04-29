@@ -24,7 +24,7 @@ export const TopBarData = {
         content: "Festive Offer Paradise course @999 grab the deal soon",
         buttons: [
             {
-                to:'https://rpy.club/g/ZOIPTYOA5B',
+                to:'https://rpy.club/g/ZOIPTY0A5B',
                 title: 'Buy Now'
             }
         ]
@@ -106,7 +106,7 @@ export const CoursesData = {
         ],
         Payment:{
             heading:"Pay Now",
-            to:'https://rpy.club/g/ZOIPTYOA5B'
+            to:'https://rpy.club/g/ZOIPTY0A5B'
         }
     },
     {
