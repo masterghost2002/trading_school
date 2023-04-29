@@ -77,7 +77,7 @@ export default function CourseCard(props) {
             }
 
           </Box>
-          <Box>
+{props.data.showEnroll && <Box>
             <Button colorScheme={'purple'} onClick={onOpen}>Enroll Now</Button>
             <VerticallyCenterModal
               isOpen={isOpen}
@@ -89,7 +89,7 @@ export default function CourseCard(props) {
               bg={useColorModeValue('white', '#3C4048')}
               footer={<ModalFooter data={props.data.Payment} />}
             />
-          </Box>
+          </Box>}
         </Stack>
       </CardBody>
     </Card>
