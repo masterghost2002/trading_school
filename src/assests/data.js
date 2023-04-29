@@ -21,10 +21,10 @@ export const Email = "support@tradingschool.com";
 // large export
 export const TopBarData = {
     Banner: {
-        content: "Festive Offer Paradise course @1989 grab the deal soon",
+        content: "Festive Offer Paradise course @999 grab the deal soon",
         buttons: [
             {
-                to: 'https://web.fankonnect.com/g/1712',
+                to:'https://rpy.club/g/ZOIPTYOA5B',
                 title: 'Buy Now'
             }
         ]
