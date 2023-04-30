@@ -21,11 +21,11 @@ export const Email = "support@tradingschool.com";
 // large export
 export const TopBarData = {
     Banner: {
-        content: "Festive Offer Paradise course @999 grab the deal soon",
+        content: "Join the free Telegram channel now",
         buttons: [
             {
-                to:'https://rpy.club/g/ZOlPTY0A5B',
-                title: 'Buy Now'
+                to:'https://t.me/stocksparadisefree',
+                title: 'Join Now'
             }
         ]
     },
